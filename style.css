@@ -7,7 +7,9 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #343541;
+    display: flex;
+    align-items: end;
+    height: 100vh;
 }
 
 .header{
@@ -25,23 +27,58 @@ body{
 }
 
 .container{
-    max-width: 920px;
+    width: 100vw;
+    max-width: 768px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 0 auto;
+    background-color: #ffffff;
+    
 }
-
+@media only screen and (min-width: 768px) {
+    .container{
+        
+        box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        min-width: 600px;
+        max-width: 768px;
+        height: 75vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto;
+        background-color: #ffffff;
+        
+        position: fixed;
+        bottom: 0;
+        left: 50;
+        width: 30%;
+        min-height: 45px;
+        z-index: 999;
+        margin: 10px;
+        padding: 5px;
+        background: rgba(255, 255, 255, 0.70);
+        border-radius: 12px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.4px);
+        -webkit-backdrop-filter: blur(7.4px);
+        border: 1px solid rgb(197, 197, 197);
+        transition: all 0.9s ease;
+        
+    }
+  }
 .info{
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 20;
+    color: rgb(0, 0, 0);
 }
 
 .info a{
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-size: 25px;
     font-weight: bold;
@@ -53,7 +90,7 @@ body{
 }
 
 .input-container{
-    background-color: #343541;
+    background-color: #ffffff;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -63,7 +100,7 @@ body{
 }
 
 #user-input{
-    background-color: #40414f;
+    background-color: #4c4c4c;
     color: #fff;
     border: none;
     outline: none;
@@ -105,31 +142,37 @@ body{
     display: flex;
     align-items: center;
     padding: 10px 15px;
+    max-width: 100%;
+    text-wrap: wrap;
+    color: black;
 }
 
 #chat-log{
     margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.6;
+    color: black;
 }
 
 #chat-log i{
     margin-right: 10px;
-    color: #fff;
+    color: #ffffff;
     border-radius: 5px;
 }
 
 .bot, .user{
     display: flex;
     align-items: flex-start;
-    color: #eee;
+    color: #000000;
+    font-weight: 500;
+    font-size: 18px;
     width: 100%;
     padding: 15px 7px 15px 10px;
     border-radius: 6px;
 }
 
 .bot{
-    background-color: #444654;
+    background-color: #ffffff;
 }
 
 #chat-log #user-icon i{
